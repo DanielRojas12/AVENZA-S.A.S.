@@ -1,0 +1,183 @@
+/* =========================================================
+   AVENZA S.A.S. — Hoja de estilos principal
+   Paleta verificada con la relación de contraste WCAG 2.1 AA (≥ 4.5:1 en texto normal)
+   ========================================================= */
+:root {
+  --avz-verde-900: #0d3b12;   /* fondos oscuros */
+  --avz-verde-700: #1b5e20;   /* color de marca: 7.9:1 sobre blanco */
+  --avz-verde-500: #2e7d32;   /* botones: 5.1:1 sobre blanco */
+  --avz-menta: #e8f5e9;
+  --avz-ambar: #f9a825;       /* acentos, siempre con texto oscuro */
+  --avz-cafe: #5d4037;
+  --avz-texto: #1f2a1f;       /* 14.9:1 sobre blanco */
+  --avz-fondo: #fbfdf9;
+  --bs-body-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bs-body-color: var(--avz-texto);
+  --bs-body-bg: var(--avz-fondo);
+  --bs-link-color: #1b5e20;
+  --bs-link-color-rgb: 27, 94, 32;
+  --bs-link-hover-color: #0d3b12;
+  --bs-link-hover-color-rgb: 13, 59, 18;
+  --bs-success: #2e7d32;
+  --bs-success-rgb: 46, 125, 50;
+  --bs-primary: #0d47a1;
+  --bs-primary-rgb: 13, 71, 161;
+}
+
+body { line-height: 1.6; font-size: 1rem; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { line-height: 1.25; color: inherit; }
+.btn { background-image: none !important; }
+.carrusel-texto .h1 { color: #fff; }
+.text-avenza { color: var(--avz-verde-700) !important; }
+.bg-menta { background: var(--avz-menta); }
+.icono { display: inline-block; vertical-align: -0.125em; }
+.text-secondary { color: #495057 !important; } /* 8.6:1 en lugar del gris por defecto */
+
+/* Botones con contraste AA */
+.btn-success { --bs-btn-bg: #2e7d32; --bs-btn-border-color: #2e7d32; --bs-btn-hover-bg: #1b5e20; --bs-btn-hover-border-color: #1b5e20; --bs-btn-active-bg: #0d3b12; --bs-btn-disabled-bg: #2e7d32; --bs-btn-disabled-border-color: #2e7d32; }
+.btn-outline-success { --bs-btn-color: #1b5e20; --bs-btn-border-color: #2e7d32; --bs-btn-hover-bg: #2e7d32; --bs-btn-hover-border-color: #2e7d32; --bs-btn-active-bg: #1b5e20; --bs-btn-active-border-color: #1b5e20; }
+.btn-warning { --bs-btn-color: #1f2a1f; --bs-btn-bg: #f9a825; --bs-btn-border-color: #f9a825; --bs-btn-hover-bg: #f57f17; --bs-btn-hover-border-color: #f57f17; }
+.text-bg-success { background-color: #2e7d32 !important; color: #fff !important; }
+.text-bg-warning { background-color: #f9a825 !important; color: #1f2a1f !important; }
+.text-bg-info { background-color: #b3e5fc !important; color: #01416b !important; }
+.text-bg-primary { background-color: #0d47a1 !important; color: #fff !important; }
+
+/* Foco visible para navegación con teclado (WCAG 2.4.7) */
+:focus-visible { outline: 3px solid var(--avz-ambar) !important; outline-offset: 2px; box-shadow: 0 0 0 5px rgba(13, 59, 18, .6) !important; }
+
+/* Enlace para saltar al contenido */
+.saltar-contenido { position: absolute; left: -9999px; top: 0; z-index: 2000; background: var(--avz-ambar); color: #000; padding: .75rem 1rem; font-weight: 700; }
+.saltar-contenido:focus { left: 1rem; top: 1rem; }
+main:focus { outline: none; }
+
+/* ---------- Encabezado ---------- */
+.barra-accesibilidad { background: var(--avz-verde-900); color: #fff; font-size: .9rem; }
+.barra-accesibilidad .btn-light { color: #0d3b12; font-weight: 700; min-width: 2.75rem; }
+.navbar-avenza { background: var(--avz-verde-700); padding-top: .5rem; padding-bottom: .5rem; }
+.navbar-avenza .nav-link { color: #fff; font-weight: 500; border-radius: .375rem; padding: .5rem .75rem; }
+.navbar-avenza .nav-link:hover { background: rgba(255, 255, 255, .15); color: #fff; }
+.navbar-avenza .nav-link.active { background: #fff; color: var(--avz-verde-700); }
+.navbar-avenza .navbar-toggler { color: #fff; border-color: rgba(255, 255, 255, .6); }
+.btn-carrito { color: #fff; border: 1px solid rgba(255, 255, 255, .6); }
+.btn-carrito:hover { background: rgba(255, 255, 255, .15); color: #fff; }
+.migas { background: var(--avz-menta); font-size: .9rem; }
+
+/* ---------- Carrusel ---------- */
+.carrusel { position: relative; overflow: hidden; background: var(--avz-verde-900); }
+.carrusel-pista { position: relative; aspect-ratio: 16 / 6; min-height: 340px; }
+.carrusel-item { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease; }
+.carrusel-item.activo { opacity: 1; visibility: visible; }
+.carrusel-item img { width: 100%; height: 100%; object-fit: cover; }
+.carrusel-texto { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 2rem 8% 3.5rem; color: #fff; max-width: 60rem; text-shadow: 0 2px 6px rgba(0, 0, 0, .45); }
+.carrusel-texto .lead { max-width: 34rem; }
+.carrusel-control { position: absolute; top: 50%; transform: translateY(-50%); border: 0; background: rgba(0, 0, 0, .45); color: #fff; width: 3rem; height: 3rem; border-radius: 50%; }
+.carrusel-control:hover { background: rgba(0, 0, 0, .7); }
+.carrusel-control.anterior { left: 1rem; }
+.carrusel-control.siguiente { right: 1rem; }
+.carrusel-indicadores { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: .5rem; align-items: center; }
+.carrusel-indicadores button { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; background: transparent; padding: 0; }
+.carrusel-indicadores button.activo { background: var(--avz-ambar); border-color: var(--avz-ambar); }
+.carrusel-indicadores .carrusel-pausa { width: 2rem; height: 2rem; background: rgba(0, 0, 0, .5); color: #fff; display: grid; place-items: center; }
+@media (max-width: 767px) {
+  .carrusel-pista { aspect-ratio: auto; height: 420px; }
+  .carrusel-texto .h1 { font-size: 1.75rem; }
+  .carrusel-control { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .carrusel-item { transition: none; } }
+
+/* ---------- Tarjetas ---------- */
+.tarjeta-acceso { color: inherit; transition: transform .2s, box-shadow .2s; border: 1px solid #c8e6c9; }
+.tarjeta-acceso:hover { transform: translateY(-4px); box-shadow: 0 .5rem 1.5rem rgba(13, 59, 18, .15); }
+.icono-circulo { display: inline-grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--avz-menta); color: var(--avz-verde-700); }
+.enlace-flecha { color: var(--avz-verde-700); font-weight: 600; }
+
+.especie-portada { background: var(--color-cat); color: #fff; display: flex; justify-content: space-between; align-items: flex-start; padding: 1.25rem; min-height: 120px; border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0; }
+.especie-hero { background: var(--color-cat); color: #fff; }
+.qr-especie { text-align: center; flex-shrink: 0; }
+.qr-especie svg { background: #fff; border: 1px solid #dee2e6; border-radius: .25rem; }
+.ficha dt { font-weight: 600; color: var(--avz-verde-700); }
+.ficha dd { margin-bottom: .75rem; }
+
+.tarjeta-producto .card-img-top { aspect-ratio: 3 / 2; object-fit: cover; height: auto; }
+.tarjeta-parque .card-header { background: var(--avz-verde-700); color: #fff; }
+
+.linea-tiempo { position: relative; padding-left: 2rem; border-left: 4px solid #a5d6a7; }
+.linea-tiempo li { position: relative; margin-bottom: 1.5rem; }
+.linea-tiempo li::before { content: ""; position: absolute; left: -2.65rem; top: .35rem; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--avz-verde-500); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--avz-verde-500); }
+.linea-fecha { font-weight: 700; color: var(--avz-verde-700); margin-bottom: .25rem; }
+
+/* ---------- Redes sociales ---------- */
+.btn-red { display: inline-flex; align-items: center; gap: .5rem; justify-content: center; min-width: 2.5rem; min-height: 2.5rem; padding: .4rem .75rem; border-radius: .5rem; color: #fff; text-decoration: none; font-weight: 600; }
+.btn-red:hover { color: #fff; filter: brightness(1.12); }
+.btn-red.instagram { background: #c13584; }
+.btn-red.facebook { background: #1877f2; }
+.btn-red.whatsapp { background: #128c4b; }
+.btn-red.linkedin { background: #0a66c2; }
+.btn-red.github { background: #24292f; }
+.redes-grandes .btn-red { min-width: 9rem; justify-content: flex-start; }
+
+/* ---------- Compra ---------- */
+.resumen div { display: flex; justify-content: space-between; padding: .25rem 0; }
+.resumen dt { font-weight: 400; }
+.resumen dd { margin: 0; }
+.resumen .total { border-top: 2px solid var(--avz-verde-700); margin-top: .5rem; padding-top: .5rem; font-size: 1.2rem; font-weight: 700; }
+.resumen .total dt { font-weight: 700; }
+.resumen-compra { position: sticky; top: 1rem; }
+.pasos li { padding: .4rem .9rem; border-radius: 2rem; background: #e9ecef; color: #343a40; }
+.pasos li.hecho { background: var(--avz-menta); color: var(--avz-verde-700); }
+.pasos li.actual { background: var(--avz-verde-700); color: #fff; font-weight: 600; }
+
+/* ---------- Administración ---------- */
+.pestanas-admin .nav-link { color: var(--avz-verde-700); border: 1px solid #c8e6c9; }
+.pestanas-admin .nav-link.active { background: var(--avz-verde-700); color: #fff; }
+.kpi { border-left: 5px solid var(--avz-verde-500); }
+.barras li { margin-bottom: .75rem; }
+.barra { height: .75rem; background: #e9ecef; border-radius: 1rem; overflow: hidden; }
+.barra span { display: block; height: 100%; background: var(--avz-verde-500); }
+
+/* ---------- Equipo ---------- */
+.foto-dev { object-fit: cover; border: 4px solid var(--avz-menta); }
+.perfil-dev { max-width: 900px; }
+.perfil-dev-foto { background: var(--avz-menta); }
+
+/* ---------- Avisos ---------- */
+.avisos { position: fixed; right: 1rem; bottom: 1rem; z-index: 1100; width: min(380px, calc(100vw - 2rem)); }
+.mapa iframe { border: 0; }
+
+/* ---------- Pie de página ---------- */
+.footer-avenza { background: var(--avz-verde-900); color: #e8f5e9; }
+.footer-avenza a { color: #fff; }
+.footer-avenza a:hover { color: var(--avz-ambar); }
+.footer-avenza li { margin-bottom: .35rem; }
+.footer-avenza hr { border-color: rgba(255, 255, 255, .3); }
+
+/* =========================================================
+   Modo de alto contraste (botón de accesibilidad)
+   ========================================================= */
+body.alto-contraste { --bs-body-bg: #000; --bs-body-color: #fff; background: #000 !important; color: #fff !important; }
+body.alto-contraste .card, body.alto-contraste .accordion-item, body.alto-contraste .accordion-button,
+body.alto-contraste .list-group-item, body.alto-contraste .modal-content, body.alto-contraste .bg-light,
+body.alto-contraste .bg-menta, body.alto-contraste .migas, body.alto-contraste .perfil-dev-foto,
+body.alto-contraste .form-control, body.alto-contraste .form-select, body.alto-contraste .input-group-text,
+body.alto-contraste .table, body.alto-contraste .navbar-avenza, body.alto-contraste .footer-avenza,
+body.alto-contraste .barra-accesibilidad, body.alto-contraste .especie-portada, body.alto-contraste .especie-hero,
+body.alto-contraste .tarjeta-parque .card-header, body.alto-contraste .pasos li {
+  background: #000 !important; color: #fff !important; border-color: #fff !important;
+}
+body.alto-contraste .table { --bs-table-bg: #000; --bs-table-color: #fff; --bs-table-hover-bg: #222; --bs-table-hover-color: #fff; }
+body.alto-contraste a, body.alto-contraste .text-avenza, body.alto-contraste .enlace-flecha,
+body.alto-contraste .linea-fecha, body.alto-contraste .ficha dt { color: #ffeb3b !important; }
+body.alto-contraste .text-secondary, body.alto-contraste .form-text { color: #e0e0e0 !important; }
+body.alto-contraste .btn { background: #000 !important; color: #ffeb3b !important; border: 2px solid #ffeb3b !important; }
+body.alto-contraste .nav-link.active, body.alto-contraste .pasos li.actual { background: #ffeb3b !important; color: #000 !important; }
+body.alto-contraste .badge, body.alto-contraste .alert { background: #000 !important; color: #fff !important; border: 1px solid #fff !important; }
+body.alto-contraste .btn-red { background: #000 !important; border: 2px solid #ffeb3b; color: #ffeb3b !important; }
+body.alto-contraste .carrusel-texto { background: rgba(0, 0, 0, .8); max-width: none; }
+body.alto-contraste .icono-circulo { background: #000; color: #ffeb3b; border: 2px solid #ffeb3b; }
+
+/* ---------- Impresión (facturas y fichas con QR) ---------- */
+@media print {
+  header, footer, .avisos, .d-print-none, nav[aria-label="Otras especies"] { display: none !important; }
+  .card { box-shadow: none !important; border: 1px solid #999 !important; }
+  .especie-hero { background: #fff !important; color: #000 !important; border: 2px solid #000; }
+}

@@ -1,0 +1,37 @@
+{
+  "desarrolladores": [
+    {
+      "id": 1,
+      "nombre": "Juan Felipe Rodríguez Santaella",
+      "rol": "Desarrollador Frontend React",
+      "celular": "3001112233",
+      "email": "juanf.rodriguezs@unilibre.edu.co",
+      "foto": "/img/devs/juan-felipe.svg",
+      "linkedin": "https://www.linkedin.com/",
+      "github": "https://github.com/",
+      "perfil": "Estudiante de Ingeniería de Sistemas de la Universidad Libre. Responsable de la navegación SPA, el slide publicitario y el módulo de especies con códigos QR."
+    },
+    {
+      "id": 2,
+      "nombre": "María Alejandra Guerrero Molina",
+      "rol": "Desarrolladora Full Stack",
+      "celular": "3002223344",
+      "email": "mariaa.guerrerom@unilibre.edu.co",
+      "foto": "/img/devs/maria-alejandra.svg",
+      "linkedin": "https://www.linkedin.com/",
+      "github": "https://github.com/maleegia",
+      "perfil": "Estudiante de Ingeniería de Sistemas de la Universidad Libre. Responsable del backend en Express.js, la base de datos en Neon y la facturación."
+    },
+    {
+      "id": 3,
+      "nombre": "Daniel Alejandro Rojas Saavedra",
+      "rol": "Desarrollador Frontend y QA",
+      "celular": "3003334455",
+      "email": "daniela.rojass@unilibre.edu.co",
+      "foto": "/img/devs/daniel-alejandro.svg",
+      "linkedin": "https://www.linkedin.com/",
+      "github": "https://github.com/",
+      "perfil": "Estudiante de Ingeniería de Sistemas de la Universidad Libre. Responsable de la tienda, el carrito, la accesibilidad y las pruebas de calidad."
+    }
+  ]
+}
