@@ -42,7 +42,7 @@ export default function Factura() {
         <div className="card-body p-4 p-md-5">
           <div className="d-flex flex-wrap justify-content-between gap-3 border-bottom pb-3 mb-3">
             <div>
-              <img src="/img/logo.svg" alt="AVENZA S.A.S." width="245" height="59" />
+              <img src="/img/logo-avenza.png" alt="AVENZA S.A.S." width="133" height="120" />
               <p className="small mb-0 mt-2">NIT {EMPRESA.nit}<br />{EMPRESA.direccion}<br />{EMPRESA.email}</p>
             </div>
             <div className="text-md-end">

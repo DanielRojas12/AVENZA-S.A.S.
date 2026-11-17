@@ -27,7 +27,7 @@ export default function Header() {
       <nav className="navbar navbar-expand-xl navbar-avenza" aria-label="Navegación principal">
         <div className="container">
           <Link to="/" className="navbar-brand" aria-label="AVENZA S.A.S. - ir al inicio">
-            <img src="/img/logo-claro.svg" alt="" width="200" height="48" />
+            <span className="logo-chip"><img src="/img/logo-avenza.png" alt="" width="71" height="64" /></span>
           </Link>
           <div className="d-flex align-items-center gap-2 order-xl-last">
             <Link to="/carrito" className="btn btn-carrito position-relative" aria-label={`Carrito de compras, ${unidades} productos`}>

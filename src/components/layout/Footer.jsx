@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container py-5">
         <div className="row g-4">
           <div className="col-md-4">
-            <img src="/img/logo-claro.svg" alt="AVENZA S.A.S." width="220" height="53" className="mb-3" />
+            <span className="logo-chip logo-chip-grande mb-3"><img src="/img/logo-avenza.png" alt="AVENZA S.A.S." width="124" height="112" /></span>
             <p className="mb-2">{EMPRESA.lema}. Plataforma educativa sobre zoológicos, fauna y conservación.</p>
             <RedesSociales />
           </div>
