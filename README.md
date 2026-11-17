@@ -78,10 +78,5 @@ npm run dev       # React        → http://localhost:5173
 | GET/POST/PATCH | `/api/pqr`, `/api/pqr/radicado/:n` | PQR |
 | POST | `/api/ia/recomendar` | Recomendador con Gemini |
 
-## Antes de entregar
-
-- Reemplace `public/img/logo.svg` y `logo-claro.svg` por el logotipo oficial del grupo.
-- Reemplace las fotos de `public/img/devs/` y los celulares de `db.json` por los reales.
-- Cambie las URL de redes sociales en `src/data/empresa.js` por las cuentas del proyecto.
 
 Íconos: Font Awesome Free (CC BY 4.0).
